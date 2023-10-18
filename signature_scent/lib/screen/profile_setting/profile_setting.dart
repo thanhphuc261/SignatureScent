@@ -12,7 +12,7 @@ class _ProfileSettingState extends State<ProfileSetting> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('SETTING PROFILE'),
          actions: <Widget>[
           IconButton(
@@ -43,7 +43,6 @@ class _ProfileSettingState extends State<ProfileSetting> {
           ),
         ],
       ),),
-      
     );
   }
 }

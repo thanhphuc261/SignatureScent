@@ -29,13 +29,12 @@ class _HomePageState extends State<HomePage> {
               'Go to setting profile',
             ),
             ElevatedButton(onPressed: () {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  (ProfileSetting())),
-  );
-}, child:const Text("Click me"))
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>  ( const ProfileSetting())),
+            );
+            }, child:const Text("Click me"))
           ],
-
         ),
       ),
    
