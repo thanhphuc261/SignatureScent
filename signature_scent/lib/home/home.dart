@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signature_scent/baitap/items/itemclass.dart';
 import 'package:signature_scent/screen/profile_setting/profile_setting.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,14 +25,28 @@ class _HomePageState extends State<HomePage> {
               'Go to setting profile',
             ),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => (const ProfileSetting())),
-                  );
-                },
-                child: const Text("Click me"))
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => (const ProfileSetting())),
+                );
+              },
+              child: const Text("Click me"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => (const ItemClass(
+                      items: 5,
+                    )),
+                  ),
+                );
+              },
+              child: const Text("List View"),
+            ),
           ],
         ),
       ),
