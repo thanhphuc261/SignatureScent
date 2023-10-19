@@ -27,8 +27,7 @@ class Statistics extends StatelessWidget {
             child: Text(
               lable,
               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+               
                 color: color,
               ),
             ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:signature_scent/screen/profile_setting/listmenu.dart';
 import 'package:signature_scent/screen/profile_setting/order.dart';
+import 'package:signature_scent/screen/profile_setting/profile.dart';
+import 'package:signature_scent/screen/profile_setting/statistics.dart';
 
 class ProfileSetting extends StatefulWidget {
   const ProfileSetting({super.key});
@@ -28,6 +31,8 @@ class _ProfileSettingState extends State<ProfileSetting> {
       ),
       body: Column(
         children: <Widget>[
+          const ProfileScreen(),
+          const Statistics(),
           TextButton(
             onPressed: () {
               Navigator.push(
@@ -53,17 +58,18 @@ class _ProfileSettingState extends State<ProfileSetting> {
         child: ListView(
           children: const [
             DrawerHeader(
-              child: Text("Menu"),
+              child: Icon(
+                Icons.person,
+                color: Colors.white,
+                size: 46,
+              ),
             ),
-            ListTile(
-              title: Text('Danh sách nước hoa'),
-            ),
-            ListTile(
-              title: Text('Danh sách loại nước hoa'),
-            ),
-            ListTile(
-              title: Text('Trở về trang chủ'),
-            ),
+            MyListTilte(
+                icon: Icons.label_important_sharp, title: 'Danh sách sản phẩm'),
+            MyListTilte(
+                icon: Icons.label_important_sharp, title: 'Danh sách sản phẩm'),
+            MyListTilte(
+                icon: Icons.logout, title: 'Đăng xuất'),
           ],
         ),
       ),
