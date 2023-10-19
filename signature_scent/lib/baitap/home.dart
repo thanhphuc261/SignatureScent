@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signature_scent/baitap/homepage.dart';
 import 'package:signature_scent/baitap/listdrawer.dart';
 
 class homescreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('SETTING PROFILE'),
+        title: const Text('DEMO APP'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.star),
@@ -31,9 +32,23 @@ class _homescreenState extends State<homescreen> {
         child: Padding(
           padding: const EdgeInsets.only(top: 10),
           child: ListView(
-            children: const [
-              listdrawer(icon: Icons.home, title: 'Home'),
-              listdrawer(icon: Icons.list, title: 'List'),
+            children: [
+              listdrawer(
+                  icon: Icons.home,
+                  title: 'Home',
+                  onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const GridHomePage())),
+                      )),
+              listdrawer(
+                  icon: Icons.list,
+                  title: 'List',
+                  onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const GridHomePage())),
+                      )),
             ],
           ),
         ),
