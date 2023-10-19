@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MyListTilte extends StatelessWidget {
-  const MyListTilte({super.key, required this.icon, required this.title});
+class listdrawer extends StatelessWidget {
+  const listdrawer(
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.onTap});
   final IconData icon;
   final String title;
+  final void Function()? onTap;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,6 +19,7 @@ class MyListTilte extends StatelessWidget {
           icon,
           color: Colors.white,
         ),
+        onTap: onTap,
         title: Text(title,
             style: const TextStyle(
               color: Colors.white,

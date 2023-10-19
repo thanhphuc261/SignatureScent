@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signature_scent/home/home.dart';
+import 'package:signature_scent/baitap/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      home: const homescreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
