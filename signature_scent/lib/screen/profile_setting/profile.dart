@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class profile_screen extends StatefulWidget {
-  const profile_screen({super.key});
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
 
   @override
-  State<profile_screen> createState() => _profile_screenState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _profile_screenState extends State<profile_screen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
           color: Colors.amber,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(padding: EdgeInsets.only(top: 5)),
