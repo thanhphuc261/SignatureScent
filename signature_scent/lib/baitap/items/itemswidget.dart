@@ -1,9 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ItemWidget extends StatelessWidget {
-  const ItemWidget({super.key, required this.index});
+  const ItemWidget({super.key, required this.item, required this.imgList});
 
-  final int index;
+  final int item;
+  final List<String> imgList;
 
   @override
   Widget build(BuildContext context) {
@@ -16,23 +19,26 @@ class ItemWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: const EdgeInsets.only(right: 20),
-              width: 50,
-              height: 50,
-              decoration: const BoxDecoration(color: Colors.amber),
+              padding: const EdgeInsets.only(right: 10),
+              child: Image.asset(
+                'images/${imgList[Random().nextInt(imgList.length)]}.jpg',
+                width: 100,
+                height: 50,
+                fit: BoxFit.cover,
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.only(left: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Title $index',
+                    'Title $item',
                     style: const TextStyle(fontSize: 14, color: Colors.black),
                   ),
                   Text(
-                    'sub title $index',
+                    'sub title $item',
                     style: const TextStyle(fontSize: 14, color: Colors.black),
                   ),
                 ],

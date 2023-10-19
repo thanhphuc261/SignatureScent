@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signature_scent/baitap/items/itemclass.dart';
+import 'package:signature_scent/baitap/items/itemlist.dart';
 import 'package:signature_scent/screen/profile_setting/profile_setting.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,8 +40,20 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => (const ItemClass(
+                    builder: (context) => (const ItemList(
                       items: 5,
+                      imgList: [
+                        'listview_img_0',
+                        'listview_img_1',
+                        'listview_img_2',
+                        'listview_img_3',
+                        'listview_img_4',
+                        'listview_img_5',
+                        'listview_img_6',
+                        'listview_img_7',
+                        'listview_img_8',
+                        'listview_img_9'
+                      ],
                     )),
                   ),
                 );

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:signature_scent/baitap/homepage.dart';
-import 'package:signature_scent/baitap/items/itemclass.dart';
-
 import 'package:signature_scent/baitap/listdrawer.dart';
+import 'package:signature_scent/baitap/items/itemlist.dart';
 
 class homescreen extends StatefulWidget {
   const homescreen({super.key, required String title});
@@ -50,7 +48,21 @@ class _homescreenState extends State<homescreen> {
                   onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => (const ItemClass(items: 10))),
+                            builder: (context) => (const ItemList(
+                                  items: 20,
+                                  imgList: <String>[
+                                    'listview_img_0',
+                                    'listview_img_1',
+                                    'listview_img_2',
+                                    'listview_img_3',
+                                    'listview_img_4',
+                                    'listview_img_5',
+                                    'listview_img_6',
+                                    'listview_img_7',
+                                    'listview_img_8',
+                                    'listview_img_9'
+                                  ],
+                                ))),
                       )),
             ],
           ),

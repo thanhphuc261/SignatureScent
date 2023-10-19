@@ -9,14 +9,14 @@ class GridHomePage extends StatefulWidget {
 }
 
 class _GridHomePageState extends State<GridHomePage> {
-  late int socot = 3;
-  late int sodong = 5;
-  late int socon = socot * sodong;
+  late int socot = 3; // Columns
+  late int sodong = 5; // Rows
+  late int socon = socot * sodong; // Total items base on Columns and Rows
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('H O M E'),
       ),
